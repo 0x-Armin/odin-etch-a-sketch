@@ -20,3 +20,10 @@ function createGrid() {
 }
 
 createGrid();
+
+function changeHover(e) {
+  this.classList.add('hover');
+}
+
+const squares = Array.from(document.querySelectorAll('.square'));
+squares.forEach(square => square.addEventListener('mouseover', changeHover));
