@@ -25,5 +25,11 @@ function changeHover(e) {
   this.classList.add('hover');
 }
 
+function changeOut(e) {
+  this.classList.remove('hover');
+  this.classList.add('out');
+}
+
 const squares = Array.from(document.querySelectorAll('.square'));
 squares.forEach(square => square.addEventListener('mouseover', changeHover));
+squares.forEach(square => square.addEventListener('mouseout', changeOut));
